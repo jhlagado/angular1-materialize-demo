@@ -1,0 +1,30 @@
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" ng-click="openModal()">Modal</a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet" 
+materialize="modal" materialize-params="[{dismissible: false}]" 
+materialize-init="modalInit(emit)">
+
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a class="waves-effect waves-green btn-flat" ng-click="closeModal()">Close</a>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+<!-- data-position can be : bottom, top, left, or right -->
+<!-- data-delay controls delay before tooltip shows (in milliseconds)-->
+<a materialize="tooltip" ng-click="printSomething()" class="btn tooltipped" 
+data-position="bottom" data-delay="10" data-tooltip="I am tooltip">Hover me!</a>
+
+<br/><br/>
+
+<!-- toast -->
+<a class="btn" ng-click="Materialize.toast('I am a toast', 4000)">Toast 1!</a>
+<a class="btn" ng-click="triggerToast()" 
+materialize materialize-params="['I am also a toast',4000]" 
+materialize-init="globalInit(emit)">Toast 2!</a>
